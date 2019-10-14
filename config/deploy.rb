@@ -2,7 +2,7 @@ set :deploy_to, '/var/www/time.keeyan.xyz'
 
 set :ssh_options, {:forward_agent => true }
 
-set :repo_url, 'git@github.com/knejad/malicious-time.git'
+set :repo_url, 'git@github.com:KNejad/malicious-time.git'
 
 set :stage, fetch(:stage)
 set :rails_env, fetch(:stage)
@@ -38,6 +38,5 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails puma pumactl}
 set :rbenv_roles, :all
 
 namespace :deploy do
-  after :finishing, :compile_assets
   after :finishing, :cleanup
 end
