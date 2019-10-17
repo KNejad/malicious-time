@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root "current_time#index"
+  resources 'current_time'
 end

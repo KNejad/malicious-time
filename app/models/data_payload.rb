@@ -1,0 +1,2 @@
+class DataPayload < ApplicationRecord
+end
